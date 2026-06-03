@@ -1,5 +1,5 @@
 name: CI on Push
-run-name: ${{ github.actor }} triggered a push workflow
+run-name: triggered a push workflow
 on:
  push:
    branches:
@@ -11,6 +11,6 @@ jobs:
      - uses: actions/checkout@v4
      - uses: actions/setup-node@v4
        with:
-         node-version: '24'
+         node-version: '20'
      - run: npm install
      - run: npm test
